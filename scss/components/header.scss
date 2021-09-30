@@ -1,0 +1,148 @@
+header {
+  width: 100%;
+  background-color: $black;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+
+  .title h2 {
+    font-size: 2rem;
+    color: rgb(8, 235, 186);
+    margin-left: 2rem;
+  }
+}
+.note-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 2rem 1rem 2rem 0;
+
+  button {
+    display: inline-block;
+    position: relative;
+    outline: none;
+    border: none;
+    width: 14rem;
+    border-bottom: 3px solid rgb(8, 235, 186);
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    // background-color: black;
+    background-image: linear-gradient(55deg, black, rgb(68, 65, 65));
+    border-radius: 0.34rem;
+
+    span {
+      color: rgb(255, 255, 255);
+      font-size: 1.467rem;
+      margin-right: 2rem;
+      transition: all 0.6s ease-in;
+    }
+    &:hover span {
+      transform: rotate(90deg);
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 1.38rem;
+      transition: all 0.5s ease-in-out;
+    }
+    &:hover a {
+      color: rgb(8, 235, 186);
+    }
+  }
+}
+
+#notes-container {
+  width: 94vw;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem auto;
+  column-gap: 1.234rem;
+  row-gap: 3rem;
+
+  .notes {
+    display: flex;
+    flex-direction: column;
+    height: 15rem;
+    width: 21rem;
+    padding: 0.678rem 1rem;
+    border: 1px solid black;
+    border-radius: 0.234rem;
+    background-color: rgb(10, 10, 10);
+    border-radius: 5px;
+    transition: all 0.5s ease-in;
+
+    .button-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin: 0.567rem 0;
+
+      .btn {
+        width: 2.867rem;
+        height: 2.867rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: rgb(5, 5, 5);
+        // background-color: rgb(255, 0, 140);
+        background-color: rgb(8, 235, 186);
+        border-radius: 54%;
+        margin: 0 0.285rem;
+        transition: all 0.5s ease-in-out;
+
+        span {
+          font-size: 1.567rem;
+        }
+
+        &:hover {
+          background-color: transparent;
+          color: rgb(8, 235, 186);
+        }
+      }
+
+      span {
+        margin: 0 0.6786rem;
+        cursor: pointer;
+        transition: all 0.4s ease-in;
+      }
+    }
+    .result {
+      color: white;
+      font-size: 0.799rem;
+      margin-top: 2rem;
+      margin-left: 0.89rem;
+      z-index: 100;
+    }
+    textarea {
+      background-color: black;
+      color: white;
+      font-size: 0.999rem;
+      border: none;
+      outline: none;
+      margin-left: 0.79rem;
+    }
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  #notes-container {
+    width: 96vw;
+
+    .notes {
+      height: 50vh;
+      width: 100%;
+    }
+  }
+}
